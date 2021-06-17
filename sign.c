@@ -52,7 +52,7 @@ int main(int argc, char* argv[]) {
 
     double time = 0;
     
-    for (int i = 0; i < 1; i++) {
+    for (int i = 0; i < 10000; i++) {
         time += sign(hashed, sig, &ku);
     }
 
@@ -61,7 +61,7 @@ int main(int argc, char* argv[]) {
         printf("%02x", sig[i]);
     }
 
-    printf("\n\nTime sign(10000): %f\n", time);
+    printf("\n\nTime sign(10000): %fms\n", time);
     
     save_signed_message(msg, len, sig, argv[1]);
 
