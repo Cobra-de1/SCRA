@@ -22,12 +22,12 @@ int main(int argc, char* argv[]) {
     read_public_key(&kp, argv[2]);
     read_private_key(&ku, argv[3]);
 
-    printf("%s\n", mpz_get_str(NULL, 16, kp.n));
+    printf("n: %s\n", mpz_get_str(NULL, 16, kp.n));
     for (int i = 0; i < HASH_SIZE; i++) {
         printf("%02x", kp.pad[i]);
     }
-    printf("\n%s\n", mpz_get_str(NULL, 16, kp.e));
-    printf("%s\n", mpz_get_str(NULL, 16, ku.d));
+    printf("\ne: %s\n", mpz_get_str(NULL, 16, kp.e));
+    printf("d: %s\n", mpz_get_str(NULL, 16, ku.d));
 
     unsigned char msg[1000 * 1024];
     unsigned char hashed[HASH_SIZE];
