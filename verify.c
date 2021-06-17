@@ -54,7 +54,7 @@ int main(int argc, char* argv[]) {
     int status = 0;
     double time = 0;
 
-    for (int i = 0; i < 1; i++) {
+    for (int i = 0; i < 10000; i++) {
         time += verify(hashed, sig, &kp, &status);
     }
     
@@ -65,7 +65,7 @@ int main(int argc, char* argv[]) {
         printf("\n\nVerify failed\n");
     }
 
-    printf("\nTime verify(10000): %f\n", time);
+    printf("\nTime verify(10000): %fms\n", time);
 
     clear_public_key(&kp);
 
