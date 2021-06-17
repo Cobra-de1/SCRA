@@ -23,13 +23,13 @@ int main(int argc, char* argv[]) {
 
     printf("Generate key done\n");
 
-    printf("n = %s\n", mpz_get_str(NULL, 16, kp.n));
-    printf("pad = ");
+    printf("n: %s\n", mpz_get_str(NULL, 16, kp.n));
+    printf("pad: ");
     for (int i = 0; i < HASH_SIZE; i++) {
         printf("%02x", kp.pad[i]);
     }
-    printf("\ne = %s\n", mpz_get_str(NULL, 16, kp.e));
-    printf("d = %s\n", mpz_get_str(NULL, 16, ku.d));
+    printf("\ne: %s\n", mpz_get_str(NULL, 16, kp.e));
+    printf("d: %s\n", mpz_get_str(NULL, 16, ku.d));
 
     save_public_key(&kp, argv[1]);
     printf("Save public done\n");    
