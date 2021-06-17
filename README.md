@@ -16,6 +16,14 @@ L = 32, b = 8
 
 ## How to run
 
+This code is running in linux, if you use windows, recompile the SCRA.o by following
+
+- Copy sha3.o and sha3.h into `SCRA` folder
+
+- Open terminal and type `gcc -c SCRA.c -o SCRA.o -l sha3.o`
+
+- Copy new SCRA.o in to `lib` folder 
+
 ### 1) Build with VisualStudio Code
 
 ### 2) Compile
