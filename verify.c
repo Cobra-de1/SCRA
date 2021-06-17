@@ -36,7 +36,7 @@ int main(int argc, char* argv[]) {
     //     printf("%02x", msg[i]);
     // }
 
-    printf("\nRandom:\n");
+    printf("Random:\n");
     for (int i = 0; i < 16; i++) {
         printf("%02x", msg[len + i]);
     }
